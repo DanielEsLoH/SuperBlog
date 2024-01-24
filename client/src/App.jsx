@@ -7,8 +7,10 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
-      <AppRoutes />
+      <div className='flex flex-col w-screen'>
+        <Navbar />
+        <AppRoutes />
+      </div>
     </Router>
   )
 }

@@ -27,11 +27,11 @@ function PostsList () {
   }, []);
   
   return (
-    <div className="flex flex-col justify-center text-center">
+    <div className="flex flex-col items-center justify-center mt-20">
       <h1 className="text-red-600 my-6">SuperBLog</h1>
       <p>Lista de posts: </p>
       {posts.map((post) => (
-        <div key={post.id} className="post-container my-4 border-2 border-black p-4 rounded-lg max-w-screen-md mx-auto w-full">
+        <div key={post.id} className="post-container my-4 border-2 border-black p-4 rounded-lg max-w-screen-md mx-auto w-full text-center">
           <h2>{post.title}</h2>
           <p>{post.content}</p>
         </div>

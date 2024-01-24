@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar-expand-lg navbar-dark bg-cyan-300 w-screen sticky top-0 p-4 items-center flex-1">
-      <div className="text-slate-900 flex justify-between">
+    <nav className="navbar-expand-lg navbar-dark bg-cyan-300 w-screen fixed top-0 p-4 items-center flex-1">
+      <div className="text-slate-900 flex justify-between P-4">
         <ul className="ml-10">
           <li>SuperBlog</li>
         </ul>
@@ -11,7 +11,8 @@ function Navbar() {
           <li className="mr-2 text-slate-900">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          {" | "}
+          <li className="ml-2">
             <Link to="/posts/new">New Post</Link>
           </li>
         </ul>
