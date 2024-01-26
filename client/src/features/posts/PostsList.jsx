@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { API_URL } from "../../constants";
+import { Link } from "react-router-dom";
 
 function PostsList () {
 
@@ -28,12 +29,16 @@ function PostsList () {
   
   return (
     <div className="flex flex-col items-center justify-center mt-20">
-      <h1 className="text-red-600 my-6">SuperBLog</h1>
-      <p>Lista de posts: </p>
+      <h2 className="font-semibold text-xl">Lista de posts: </h2>
       {posts.map((post) => (
         <div key={post.id} className="post-container my-4 border-2 border-black p-4 rounded-lg max-w-screen-md mx-auto w-full text-center">
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
+          <Link to={`/posts/${post.id}`}>
+            <h2 className="text-slate-900">{post.title}</h2>
+          </Link>
+          <p>
+            {post.content.substring(0, 250)}
+            {post.content.length > 250 && <span>...</span>}
+          </p>
         </div>
       ))}
     </div>

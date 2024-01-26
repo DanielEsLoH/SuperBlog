@@ -5,16 +5,22 @@ function Navbar() {
     <nav className="navbar-expand-lg navbar-dark bg-cyan-300 w-screen fixed top-0 p-4 items-center flex-1">
       <div className="text-slate-900 flex justify-between P-4">
         <ul className="ml-10">
-          <li>SuperBlog</li>
+          <Link to="/">
+            <li className="text-slate-900">SuperBlog</li>
+          </Link>
         </ul>
         <ul className="flex mr-10">
-          <li className="mr-2 text-slate-900">
-            <Link to="/">Home</Link>
-          </li>
+          <Link to="/">
+            <li className="mr-2 text-slate-900">
+              Home
+            </li>
+          </Link>
           {" | "}
-          <li className="ml-2">
-            <Link to="/posts/new">New Post</Link>
-          </li>
+          <Link to="/posts/new">
+            <li className="ml-2 text-slate-900">
+              New Post
+            </li>
+          </Link>
         </ul>
       </div>
     </nav>
