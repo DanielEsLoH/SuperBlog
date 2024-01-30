@@ -28,11 +28,12 @@ function PostsDetails() {
   }
 
   return (
-    <div>
-      <Link to="/">Back to posts</Link>
-      <h1>PostsDetails</h1>
-      <h2>{post.title}</h2>
-      <p>{post.content}</p>
+    <div className="h-screen mt-28 mx-28">
+      <div className="mx-32 mb-8">
+        <h1 className="text-center mb-4 text-5xl font-semibold">{post.title}</h1>
+        <p className="text-justify">{post.content}</p>
+      </div>
+      <p><Link to="/">Back to posts</Link></p>
     </div>
   );
 }
